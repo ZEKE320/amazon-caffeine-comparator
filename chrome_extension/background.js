@@ -5,5 +5,4 @@ chrome.action.onClicked.addListener((tab) => {
     },
     function: showBestDrink
   });
-
 });
