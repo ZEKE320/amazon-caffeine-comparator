@@ -1,0 +1,21 @@
+{
+  "name": "AmazonCompareCaffeine",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "description": "Amazon商品ページからカフェイン含有量を取得し比較する拡張です",
+  "permissions":[
+    "activeTab",
+    "scripting"
+  ],
+  "background":{
+    "service_worker":"script.js"
+  },
+  "content_scripts": [
+    {
+      "run_at":"document_end",
+      "matches": ["http://www.amazon.co.jp/*","https://www.amazon.co.jp/*"],
+      "js": ["jquery-3.6.0.min.js","script.js"]
+    }
+  ]
+}

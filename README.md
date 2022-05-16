@@ -1,1 +1,3 @@
 # AmazonCaffeineComparator
+
+Amazonのタイムセールで効率よくカフェインを接種するためのChrome拡張機能です。
