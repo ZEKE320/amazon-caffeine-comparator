@@ -3,7 +3,7 @@
   "action": {},
   "manifest_version": 3,
   "version": "0.0.1",
-  "description": "Amazon商品ページからカフェイン含有量を取得し比較する拡張です",
+  "description": "Amazon商品ページからレッドブルのカフェイン摂取効率を比較するChrome拡張です",
   "permissions": [
     "activeTab",
     "scripting"
