@@ -4,7 +4,7 @@ const showBestDrink = $(function () {
   let reasonability = -1;
   const rbCaffeine = 0.32; // レッドブル1mlあたりのカフェイン量(mg)
   setTimeout(function () {
-    $('.slots-hidden').each(function (idx) {
+    $('li.slots-hidden').each(function (idx) {
       const prodPattern = $(this).find('img').attr('alt');
       const splitPattern = prodPattern.replace(/\d\)/g, '').replace(/[^0-9×x+]/g, '').split(/[×x+]/g);
 
@@ -37,17 +37,19 @@ const showBestDrink = $(function () {
         $(this).find('span.a-button-text').append('<div>計算エラー</div>');
       }
 
-      console.log(prodPattern);
-      console.log(splitPattern);
-      console.log(total);
-      console.log(price);
-      console.log(newReasonability);
-      console.log(newEfficiency);
+      console.log('-----商品パターン番号: ' + idx + ' -----');
+      console.log('商品パターン: ' + prodPattern);
+      console.log('分割パターン: ' + splitPattern);
+      console.log('合計量(ml): ' + total);
+      console.log('価格: ' + price);
+      console.log('1円ごとの内容量(ml): ' + newReasonability);
+      console.log('1円ごとのカフェイン量(mg): ' + newEfficiency);
     });
 
     /** カフェイン摂取効率の高いパターンをハイライト（試験的機能） */
     if (caffeineIdx != -1) {
-      $('li.slots-hidden:eq(' + (caffeineIdx) + ')').find('.a-button-inner').css('background-color', 'orange');
+      $('li.slots-hidden:eq(' + (caffeineIdx) + ')').find('.a-button-inner').css('background-color', 'lightgreen');
+      $('li.slots-hidden:eq(' + (caffeineIdx) + ')').find('span.a-button-text').append('<div style = "color: darkgreen; font-weight: bold;"> ↑お買い得↑ </div>');
     }
   }, 1000)
 })
