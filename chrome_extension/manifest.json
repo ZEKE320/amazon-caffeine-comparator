@@ -4,10 +4,10 @@
   "manifest_version": 3,
   "version": "0.0.1",
   "description": "Amazon商品ページからレッドブルのカフェイン摂取効率を比較するChrome拡張です",
-  "icons":{
-    "16":"energy.png",
-    "48":"energy.png",
-    "128":"energy.png"
+  "icons": {
+    "16": "energy.png",
+    "48": "energy.png",
+    "128": "energy.png"
   },
   "permissions": [
     "activeTab",
